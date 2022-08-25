@@ -1,103 +1,55 @@
 #container{
     display: flex;
     justify-content: space-between;
-    margin-top: -10px;
-    border-bottom: 1px solid gray;
-    
+    border-bottom: 1px solid rgba(0, 0, 0, 0.062);
+    height: 50px;
+
 }
 #navbar{
-    width: 70%;
+    width: 50%;
     display: flex;
     justify-content: space-evenly;
     
 }
 
+
 #navbar a{
     text-decoration: none;
+    font-size: 10px;
+    margin-top: 5px;
+    color: rgba(0, 0, 0, 0.568);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+    width: 20%;
+    height: 70px;
+    margin-top: -20px;
+    margin-right: -20px;
+}
+
+#navbar img+img{
+    width: 8%;
+    height: 40px;
+
 }
 
 #container a:hover{
     border-bottom: 1px solid blue;
 }
 
-#input{
-    width: 70%;
-    margin: auto;
-    margin-top: 50px;
+.sign{
+    text-decoration: none;
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.568);
+    font-family: Arial, Helvetica, sans-serif;
+}    
+
+.hover{
     display: flex;
     justify-content: space-evenly;
+    width: 30%;
 }
-input{
-    height: 45px;
-    width: 40%;
-    border-radius: 10px;
-    text-align: center;
-    
-
+.sign span{
+    color: blue;
 }
-
-button{
-    width: 10%;
-    border-radius: 10px;
-    background-color: blue;
-    color: white;
-    font-size: 13px;
-    font-weight: bolder;
-    border: none;
-}
-
-#middle{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 60%;
-    margin: auto;
-}
-
-#middle div{
-    background-color: lightgrey;
-    border-radius: 5px;
-    height: 60px;
-    margin: auto;
-    
-}
-
-#middle div a{
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-    display: flex;
-}
-
-#middle div img{
-    width: 10%;
-}
-
-h3{
-    text-align: center;
-    margin-top: 150px;
-}
-
-#last{
-    display: flex;
-    gap: 20px;
-    margin-top: 100px;
-    border-top: 1px solid;
-    
-}
-
-#last a{
-    text-decoration: none;
-    margin-top: 20px;
-    color: rgba(0, 0, 0, 0.705);
-    font-size:20px;
-    gap: 20px;
-
-}
-
-#last a:hover{
-    border-bottom: 1px solid black;
-}
-
-
-
