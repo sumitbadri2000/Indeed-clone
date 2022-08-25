@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>salary Guide</title>
+    <link rel="stylesheet" href="navbar.css" />
+    <style>
+      #top{
+        display: flex;
+        background-color:rgba(135, 207, 235, 0.267);
+        height: 300px;
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      #top div img{
+        width: 91%;
+        height: auto;
+        margin-left: 60px;
+        border: none;
+      }
+
+      .top-write{
+        width: 100%;
+        padding: 15px;
+      }
+
+      .top-write div{
+        background-color: whitesmoke;
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+        align-items: center;
+        padding: 10px;
+
+      }
+
+      .top-write div input{
+        height: 50px;
+        border-radius: 10px;
+        width: 35%;
+      }
+      button{
+        background-color: blue;
+        color: white;
+        width: 20%;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+      }
+      #middle{
+        width: 98%;
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 60px;
+      }
+      .middle-grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,auto);
+        gap: 25px;
+      }
+      .middle-grid div div{
+        display: flex;
+        justify-content: space-between;
+        margin-top: -20px;
+      }
+
+      .middle-grid > div{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 14px;
+        border-radius: 10px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      .middle-grid > div:hover{
+        background-color: rgba(250, 235, 215, 0.616);
+        border-bottom: 2px solid blue;
+      }
+      .middle-grid > div > div > p+p{
+        font-weight: bolder;
+      }
+
+      #bottom-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,90px);
+    gap: 40px;
+}
+
+.btm-flex{
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
+    cursor: pointer;
+    
+}
+
+.btm-flex:hover{
+    background-color: lightgray;
+}
+
+.btm-flex span{
+    color: blue;
+}
+
+.btm-flex p,
+h4{
+    line-height: 20%;
+    margin-top: 15px;
+}
+
+.btm-flex img{
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#bottom{
+  width: 98%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+#last{
+    display: flex;
+    gap: 20px;
+    margin-top: 100px;
+    border-top: 1px solid;
+    
+}
+
+#last a{
+    text-decoration: none;
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 0.705);
+    font-size:20px;
+    gap: 20px;
+
+}
+
+#last a:hover{
+    border-bottom: 1px solid black;
+}
+
+#bag{
+  display: flex;
+  margin: auto;
+  background-color:rgb(217, 233, 247);
+  margin-top: 50px;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+#bag-grid{
+  display: grid;
+  grid-template-columns: repeat(3,200px);
+  grid-template-rows: repeat(7,auto);
+  width: 10%;
+  column-gap: 60px;
+}
+#bag-grid p:hover{
+  cursor: pointer;
+  text-decoration: underline;
+
+}
+
+
+#bag >div{
+  width: 90%;
+  margin-top: -10px;
+  margin-left: 60px;
+}
+
+
+
+    </style>
+</head>
+<body>
+  <div id="container">
+    <div id="navbar"> 
+            <img class="logo" src="https://logos.bugcrowdusercontent.com/logos/31c9/4eb4/c1f21362/77aca7a0c2e1d0a71ca2a2f404b6c17d_Untitled.png" >
+
+        <img src="https://d3fw5vlhllyvee.cloudfront.net/dist/header/ukraine_support.7ad2b5d444bc427dbc5d.png">  
+        <a href="index.html">
+          <h2>Find Jobs</h2>
+        </a>
+        <a href="company.html">
+          <h2>company reviews</h2>
+        </a>
+        <a href="salary.html">
+          <h2>Salary Guide</h2>
+        </a>
+    </div>
+    <div class="hover">
+        <a class="sign" href="index.html">
+            <h2>Post your resume</h2>
+          </a>
+          <a class="sign" href="index.html">
+            <h2><span>Sign in</span></h2>
+          </a>
+          <a class="sign" href="index.html">
+            <h2>Employers / Post job</h2>
+          </a>
+    </div>
+</div>
+    <div id="top">
+      <div class="top-write">
+        <h1>Find a career you'll love</h1>
+        <p>Explore which careers have the highest job satisfaction, best salaries, and more</p>
+        <div>
+          <input type="text" placeholder="job title" />
+          <input type="text" placeholder="India"  />
+          <button>Search</button>
+        </div>
+      </div>
+        <div>
+            <img src="https://d3hbwax96mbv6t.cloudfront.net/title-webapp/_next/static/images/salaries-8d20dc14bdeae8889387e0fb40e0d546.png"/>
+        </div>
+        
+    </div>
+
+    <div id="middle">
+      <h1>Browse top paying jobs by industry</h1>
+      <div class="middle-grid">
+        <div>
+          <h2>Elementary School Teacher</h2>
+          <div>
+            <p>Average Salary</p>
+            <p>₹2,48,237 per year</p>
+          </div>
+        </div>
+        <div>
+          <h2>Human Resources </h2>
+          <div>
+            <p>Average Salary</p>
+            <p>₹2,16,305 per year</p>
+          </div>
+        </div>
+        <div>
+          <h2>Accountant</h2>
+          <div>
+            <p>Average Salary</p>
+            <p>₹2,72,496 per year</p>
+          </div>
+        </div>
+        <div>
+          <h2>Customer Care Specialist</h2>
+          <div>
+            <p>Average Salary</p>
+            <p>₹2,24,376 per year</p>
+          </div>
+        </div>
+        <div>
+          <h2>Office Assistant</h2>
+          <div>
+            <p>Average Salary</p>
+            <p>₹1,88,818 per year</p>
+          </div>
+        </div>
+        <div>
+          <h2>Bank Office Executive</h2>
+          <div>
+            <p>Average Salary</p>
+            <p>₹3,79,969 per year</p>
+          </div>
+        </div>
+        <div>
+          <h2>Data Entry Clerk</h2>
+          <div>
+            <p>Average Salary</p>
+            <p>₹2,59,775 per year</p>
+          </div>
+        </div>
+        <div>
+          <h2>Graphic Designer</h2>
+          <div>
+            <p>Average Salary</p>
+            <p>₹2,60,292 per year</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="bottom">
+      <h1>Browse top paying companies by industry</h1>
+      <div id="bottom-grid">
+          <div class="btm-flex">
+              <div>
+                  <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/064eff7aab72cb84fbb7f92b82f6ac4a" alt="">
+              </div>
+              <div>
+                  <h4>Capgemini</h4>
+                  <p>4 rating <span>8.8K reviews</span></p>
+              </div>
+            </div>
+            <div class="btm-flex">
+              <div>
+                <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/13b693b4dcc055d2344351b4c9a148e9" alt="">
+            </div>
+            <div>
+                <h4>Tata Consultancy Services(TCS</h4>
+                <p>4 rating <span>20K reviews</span></p>
+            </div>
+            </div>  
+              
+
+          
+          <div class="btm-flex">
+              <div>
+                  <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/fff3cc32d7e908a657ea1da5a4a1732b" alt="">
+              </div>
+              <div>
+                  <h4>Accenture</h4>
+                  <p>5 rating <span>22.1K reviews</span></p>
+              </div>
+            </div>
+            <div class="btm-flex">
+              <div>
+                  <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/ce43c82fedc38bf5739f8c90376c3b98" alt="">
+              </div>
+              <div>
+                  <h4>Cognizant Technology Solution</h4>
+                  <p>4 rating <span>14.9K reviews</span></p>
+              </div>
+            </div>
+          <div class="btm-flex">
+              <div>
+                  <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/349d1c5aed5c3943dadc47139a21b79d" alt="">
+              </div>
+              <div>
+                  <h4>Byju's</h4>
+                  <p>3 rating <span>397K reviews</span></p>
+              </div>
+            </div>
+            <div class="btm-flex">
+              <div>
+                <img src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/e33d1816f29251d95814fd99eae809df" alt="">
+            </div>
+            <div>
+                <h4>IBM</h4>
+                <p>4 rating <span>31.6K reviews</span></p>
+            </div>
+            </div>
+
+          </div>
+      </div>
+  </div>
+  
+<div id="bag">
+  <div>
+    <h1>Frequently searched careers</h1>
+  </div>
+  <div id="bag-grid">
+  </div>
+</div> 
+
+  </div>
+</div>  
+</body>
+</html>
+<script>
+  let data = [
+    {
+      name:"Security Guard"
+    },
+    {
+      name:"Software Engineer"
+    },
+    {
+      name:"Accountant"
+    },
+    {
+      name:"Data Entry Clerk"
+    },
+    {
+      name:"Full Stack Developer"
+    },
+    {
+      name:"Physiotherapist"
+    },
+    {
+      name:"Back Office Executive"
+    },
+    {
+      name:"Assistant Professor"
+    },
+    {
+      name:"Driver"
+    },
+    {
+      name:"Teacher"
+    },
+    {
+      name:"Nurse"
+    },
+    {
+      name:"CNC Operator"
+    },
+    {
+      name:"Electrical Engineer"
+    },
+    {
+      name:"Radiologist"
+    },
+    {
+      name:"Data Analyst"
+    },
+    {
+      name:"Web Developer"
+    },
+    {
+      name:"Collector"
+    },
+    {
+      name:"Office Assistant"
+    },
+    {
+      name:"Police Officer"
+    },
+    {
+      name:"Flight Attendant"
+    },
+    {
+      name:"School Teacher"
+    },  
+  ];
+  data.map(function(ele){
+    let p = document.createElement("p")
+    p.innerText=ele.name
+
+    document.querySelector("#bag-grid").append(p)
+  })
+</script>
