@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create account</title>
+    <style>
+
+        form h3,h5{
+            margin-bottom: -5px;
+            font-size: 20px;
+        }
+
+        form h5{
+            color: rgba(128, 128, 128, 0.801);
+        }
+        form p{
+            line-height: 18px;
+            font-size: 14px;
+        }
+        .img{
+            width: 50%;
+            margin: auto;
+        }
+        img{
+            width: 30%;
+            margin-left: 35%;
+            margin-top: 50px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.64) 0px 3px 8px;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid grey;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        label{
+            margin-bottom: 5px;
+        }
+        button{
+            margin-bottom: 20px;
+            border-radius: 10px;
+            padding: 10px;
+            height: 50px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .sign{
+            margin: auto;
+        }
+
+        .line1{
+    margin-top: 100px;
+
+}
+#last{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#last a{
+    text-decoration: none;
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 0.705);
+    font-size:17px;
+    gap: 20px;
+
+}
+
+#last a:hover{
+    border-bottom: 1px solid black;
+}
+
+    </style>
+</head>
+<body>
+    <div class="img">
+        <img src="https://www.zephyrpoint.org/wp-content/uploads/2021/04/indeed-logo-vector.png"/>
+        
+    </div>
+    <form>
+        <h3>Ready to take the next step?</h3>
+        <h5>Create an account or sign in.</h5>
+        <p>By creating an account or logging in, you understand and agree to Indeed's Terms. You also acknowledge our Cookie and Privacy policies. You will receive marketing messages from Indeed and may opt out at any time by following the unsubscribe link in our messages, or as detailed in our terms.</p>
+        <label>Full Name</label>
+        <input placeholder="Enter Full Name" id="name" type="text"/>
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter Email" />
+        <label>Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Password"
+        />
+        <button>Create Account</button>
+        <p class="sign">Already Account? <a href="signin.html">sign in</a></p>
+      </form>
+      <div class="line1">
+        <div id="last">
+            <a href="">
+                Career Advice
+            </a>
+      
+   
+            <a href="salary.html">
+                Salaries
+            </a>
+ 
+            <a href="Indeed-event.html">
+                Indeed Events
+            </a>
+ 
+            <a href="about.html">
+                About
+            </a>
+  
+            <a href="">
+                Help center
+            </a>
+            <a href="">
+                Browse Jobs
+            </a>
+            <a href="">
+                Browse Companies
+            </a>
+            <a href="">
+                Post a job
+            </a>
+        </div>
+        <div id="last">
+        <a href="">
+            2022 Indeed
+        </a>
+        <a href="">
+            Accessibility at Indeed
+        </a>
+        <a href="">
+            Privacy Center
+        </a>
+        <a href="">
+            Cookies
+        </a>
+        <a href="">
+            Privacy
+        </a>
+        <a href="">
+            Terms
+        </a>
+    </div>   
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",myCall);
+    function myCall(event){
+      event.preventDefault();
+      let name = document.querySelector("#name").value
+      let email = document.querySelector("#email").value
+
+      let password = document.querySelector("#password").value
+      if(name=="" || email=="" || password==""){
+        alert("fill the detail")
+      }else {
+        alert("Sign up successfully ")
+        
+      }
+      localStorage.setItem("name",name)
+      localStorage.setItem("email",email)
+      localStorage.setItem("password",password)
+    } 
+
+</script>
