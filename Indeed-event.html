@@ -4,24 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
-    <link rel="stylesheet" href="navbar.css" />
+    <title>Indeed Events</title>
     <style>
-        #top{
+        #container{
             display: flex;
-            background-color: blueviolet;
-            height: auto;
+            justify-content: space-between;
+        }
+
+        #navbar img{
+            width: 200px;
+            height: 80px;
+        } 
+
+        .hover{
+            margin-top: 20px;
+        }
+
+        .hover button{
+            margin-left: 20px;
+        }
+
+        .hover select{
+            width: 10%;
+            margin-left: 10px;
+            height: 40px;
+            background-color: grey;
+            border-radius: 10px;
+        }
+
+        #top{
+            background-color:darkblue;
+            height: 300px;
+            font-family: Arial, Helvetica, sans-serif;
         }
         #top .write{
             color: white;
-            width: 20%;
+            width: 30%;
             margin: auto;
             font-size: 18px;
-            height: auto;
+            padding: 50px;
+            margin-left: 100px;
         }
 
-        #top img{
-            height: auto;
+        #top div+div{
+            width: 30%;
         }
 
         #middle{
@@ -74,6 +100,8 @@
         #bottom{
             width: 80%;
             margin: auto;
+            margin-top: 80px;
+            font-size: 20px;
         }
         .btm-grid{
             display: grid;
@@ -81,31 +109,226 @@
             grid-template-rows: repeat(2,auto);;
             margin: auto;
             gap: 10px;
+            margin-top: 50px;
         }
         .btm-grid img{
             width: 100%;
             height: 200px;
         }
+        #line{
+            display: flex;
+            background-color: rgba(185, 180, 185, 0.808);
+            padding: 30px;
+            justify-content: space-around;
+            margin-top: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
+        #line button{
+            background-color: whitesmoke;
+            color: rgba(0, 0, 255, 0.603);
+            margin-right: 5%;
+            border: 1px solid black;
+            width: 30%;
+            font-size: 15px;
+        }
+        #line button:hover{
+            background-color: lightblue;
+        }
+
+        .line-grid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(4,auto);
+            width: 50%;
+            font-size: 18px;
+        }
+        .line-grid p{
+            font-size: 12px;
+            color: blue;
+        }
+
+        .line-grid p:hover{
+            text-decoration:underline black;
+            cursor: pointer;
+        }
+
+        #footer{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #footer div{
+            width: 48%;
+            line-height: 8px;
+            font-size: 14px;
+        }
+
+        #footer div+div{
+            width: 20%;
+            cursor: pointer;
+            margin-top: 10px;
+       }
+       #footer img{
+        margin-right: 10px;
+       }
+
+       @media all and (min-width: 600px) and (max-width: 1272px){
+
+        #navbar img{
+            width: 150px;
+        } 
+
+        .hover button{
+            margin-left: 30px;
+        }
+
+        .hover select{
+            width: 10%;
+            margin-left: 10px;
+            height: 40px;
+            background-color: grey;
+            border-radius: 10px;
+        }
+        #top .write{
+            font-size: 14px;
+        }
+
+        #middle{
+            flex-direction: column;
+        }
+        #middle div{
+            width: 100%;
+        }
+
+        #middle div img{
+            height: 400px;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        #middle div div{
+            height: 5px;
+            width: 100%;
+            margin: 30px 0px 10px 0px;
+        }
+        .btm-grid{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(5,auto);;
+        }
+        #line{
+            flex-direction: column;
+        }
+
+        .line-grid{
+            width: 70%;
+            font-size: 16px;
+        }
+
+        #footer{
+            flex-direction: column-reverse;
+            margin: auto;
+        }
+
+        #footer div{
+            width: 80%;
+            margin: auto;
+            font-size: 12px;
+        }
+
+        #footer div+div{
+            width: 40%;
+       }
+       }
+
+     @media all and (min-width: 280px) and (max-width: 599px){
+        #navbar img{
+            width: 100px;
+        } 
+
+        .hover button{
+            margin-left: 30px;
+            font-size: 10px;
+            width: 30%;
+        }
+
+        .hover select{
+            width: 10%;
+            margin-left: 10px;
+            height: 40px;
+            background-color: grey;
+            border-radius: 10px;
+        }
+        #top .write{
+            font-size: 10px;
+        }
+
+        #middle{
+            flex-direction: column;
+            font-size: 14px;
+        }
+        #middle div{
+            width: 100%;
+        }
+
+        #middle div img{
+            height: 400px;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+
+        .btm-grid{
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(10,auto);;
+        }
+
+        #line{
+            flex-direction: column;
+        }
+
+        #line > div > button{
+            font-size: 10px;
+        }
+
+
+        .line-grid{
+            width: 70%;
+            font-size: 14px;
+            gap: 20px;
+        }
+
+        #footer{
+            flex-direction: column-reverse;
+            margin: auto;
+        }
+
+        #footer div{
+            font-size: 10px;
+            width: 100%;
+        }
+
+        #footer div+div{
+            width: 60%;
+       }
+       }
     </style>
 </head>
 <body>
     <div id="container">
         <div id="navbar"> 
-           <a href="index.html" >
-            <img src="https://d3fw5vlhllyvee.cloudfront.net/dist/header/ukraine_support.7ad2b5d444bc427dbc5d.png"></a>
-            <a href=>
-              <h2>indeed</h2>
-            </a>
-            <a href=>
-              <h2>Find Jobs</h2>
-            </a>
-            <a href="company.html">
-              <h2>company reviews</h2>
-            </a>
-            <a href=>
-              <h2>Salary Guide</h2>
-            </a>
+                <img class="logo" src="https://logos.bugcrowdusercontent.com/logos/31c9/4eb4/c1f21362/77aca7a0c2e1d0a71ca2a2f404b6c17d_Untitled.png" >
+        </div>
+        <div class="hover">
+                <button>Employer Events</button>
+                <button>Jobseeker Events</button>
+              <select>
+                <option>Language</option>
+                <option>Australia(English)</option>
+                <option>Canada(English)</option>
+                <option>India(English)</option>
+                <option>Ireland(English)</option>
+              </select>
         </div>
     </div>
     <div id="top">
@@ -115,9 +338,6 @@
             </h1>
             <p>job seekers and employers alike, we've got something for you—whether you join us in person or from your favourite device.
             </p>
-        </div>
-        <div >
-            <img src="https://scontent.fdel35-1.fna.fbcdn.net/v/t39.30808-6/169083810_10159044722548381_6475289824185325198_n.png?_nc_cat=105&ccb=1-7&_nc_sid=e3f864&_nc_ohc=nS7OWz-vXsMAX9CKXep&_nc_ht=scontent.fdel35-1.fna&oh=00_AT-pMyd9nsL1zxYpJ0g3tXmU1a7UVL_syjXyOp-W13iAIw&oe=630B5B1C" />
         </div>
     </div>
     <div id="middle">
@@ -130,10 +350,10 @@
         </div>
         <div >
             <div></div>
-            <h1>Events for employers</h1>
-            <p>We love giving you the insights and tools you need to solve any hiring challenge. So if you’re an employer looking for new ways to hire or new friends to share strategies with, start here.</p>
-            <button>View employer events</button><br>
-            <img src="https://www.indeedevents.com/en-ca/wp-content/uploads/sites/28/2021/06/IndeedEvents-Landing-Employer-Desktop.png" />
+            <h1>Events for jobseekers</h1>
+            <p>Making career support available for all jobseekers is what we do. Check out our upcoming resource and opportunity-filled events available in-person or virtually.</p>
+            <button>View jobseeker events</button><br>
+            <img src="https://www.indeedevents.com/en-in/wp-content/uploads/sites/9/2021/06/IndeedEvents-Landing-JobSeeker-Desktop.png" />
         </div>
         
     </div>
@@ -153,29 +373,94 @@
             <img src="https://www.indeedevents.com/en-ca/wp-content/uploads/sites/28/2020/03/BPI_170515_97771-1024x723.jpg" />
         </div>
     </div>
-    <div id="last">
-      
-        <a href="">
-            Career Advice
-        </a>
-  
 
-        <a href="">
-            Salaries
-        </a>
+    <div id="line">
+        <div>
+            <h1>We are here to help</h1>
+            <p>visit our Help CEnter for answers to common questions or contact us directly.</p>
+            <button>Help Center</button>
+            <button>contact Support</button>
+        </div>
+        <div class="line-grid">
+            <div class="first">
+                <h3>Indeed</h3>
+            </div>
+            <div class="se">
+                <h3>Solutions</h3>
+            </div>
+            <div class="th">
+                <h3>Resources</h3>
+            </div>
+        </div>
 
-        <a href="Indeed-event.html">
-            Indeed Events
-        </a>
-
-        <a href="about.html">
-            About
-        </a>
-
-        <a href="">
-            Help center
-        </a>
     </div>
-</div> 
+
+    <div id="footer">
+        <div>
+            <p>©2022 Indeed • Indeed India Operations Pvt. Limited | 10th Floor, Skyview 10, Survey No.83/1,</p>
+            <p>Raidurg (Panmaktha) Village, Rangareddi, Hyderabad - 500081, Telangana | India</p>
+        </div>
+        <div>
+            <img src="https://dpuk71x9wlmkf.cloudfront.net/components/indeed-pcl/current/img/icon-footer-ios.svg"/>
+            <img src="https://dpuk71x9wlmkf.cloudfront.net/components/indeed-pcl/current/img/icon-footer-android.svg"/>
+            <img src="https://dpuk71x9wlmkf.cloudfront.net/components/indeed-pcl/current/img/icon-footer-facebook.svg"/>
+            <img src="https://dpuk71x9wlmkf.cloudfront.net/components/indeed-pcl/current/img/icon-footer-twitter.svg"/>
+            <img src="https://dpuk71x9wlmkf.cloudfront.net/components/indeed-pcl/current/img/icon-footer-linkedin.svg"/>
+            <img src="https://dpuk71x9wlmkf.cloudfront.net/components/indeed-pcl/current/img/icon-footer-youtube.svg"/>
+            <img src="https://dpuk71x9wlmkf.cloudfront.net/components/indeed-pcl/current/img/icon-footer-instagram.svg"/>
+        </div>
+    </div>
 </body>
 </html>
+<script>
+    let data=[
+        {
+            name:"Why Indeed"
+        },
+        {
+            name:"Contact us"
+        },
+        {
+            name:"Accessibility at Indeed"
+        },
+        {
+            name:"Privacy centre"
+        },
+    ]
+
+    data.map(function(ele){
+        let p=document.createElement("p");
+        p.innerText=ele.name
+        document.querySelector(".first").append(p)
+    })
+
+    let datase=[
+    {
+            name:"All products"
+        },
+        {
+            name:"Resume"
+        },
+    ]    
+    datase.map(function(ele){
+        let p=document.createElement("p");
+        p.innerText=ele.name
+        document.querySelector(".se").append(p)
+    })
+let datath=[
+        {
+            name:"How it works"
+        },
+        {
+            name:"FAQ"
+        },
+        {
+            name:"Indeed Events"
+        },
+] 
+    datath.map(function(ele){
+        let p=document.createElement("p");
+        p.innerText=ele.name
+        document.querySelector(".th").append(p)
+    })
+</script>

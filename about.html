@@ -16,6 +16,7 @@
 
         #flex img{
             height: 500px;
+            width: auto;
         }
 
         #flex div{
@@ -38,9 +39,12 @@
         }
 
         #middle{
-            display: flex;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(1,auto);
+            justify-content: space-between;
             width: 90%;
+            margin: auto;
             font-family: Arial, Helvetica, sans-serif;
             margin-top: 60px;
             margin-bottom: 100px;
@@ -68,6 +72,124 @@
             background-color: blue;
         }
 
+        #bottom{
+            display: flex;
+            background-color: rgb(233, 225, 233);
+            padding: 30px;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        #bottom button{
+            background-color: whitesmoke;
+            color: rgba(0, 0, 255, 0.603);
+            margin-right: 5%;
+            border: 1px solid black;
+            width: 30%;
+            font-size: 15px;
+        }
+        #bottom button:hover{
+            background-color: lightblue;
+        }
+
+        .bottom-grid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(10,auto);
+            width: 50%;
+        }
+
+        .bottom-grid p{
+            font-size: 14px;
+            color: rgba(43, 42, 42, 0.863);
+
+        }
+        .bottom-grid p:hover{
+            text-decoration:underline black;
+            cursor: pointer;
+        }
+
+        @media all and (min-width: 600px) and (max-width: 1272px){
+        #flex img{
+            height: 300px;
+        }
+
+        #flex div{
+            font-size: 15px;
+            line-height: 20px;
+        }
+        #flex > div > h1{
+            margin-top: 30px;
+        }
+
+        #flex > div > p{
+            color: rgb(80, 79, 79);
+            font-size: 12px;
+        }
+
+        #flex > div > h4{
+            color: rgb(48, 43, 43);
+        }
+        #flex button{
+            font-size: 10px;
+        }
+
+        #middle{
+            gap: 20px;
+        }
+
+        #middle div h1{
+            font-size: 60px;
+        }
+
+        button{
+            height: 50px;
+            padding: 10px;
+            font-size: 15px;
+        }
+
+        #bottom{
+            display: flex;
+            background-color: rgb(233, 225, 233);
+            padding: 30px;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        #bottom button{
+            width: 60%;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .bottom-grid{
+            width: 70%;
+            gap: 10px;
+
+        }
+        .bottom-grid h3{
+            font-size: 14px;
+        }
+        }
+
+        @media all and (min-width: 280px) and (max-width: 599px){
+            #flex{
+                flex-direction: column;
+            }
+        #flex img{
+            height: 250px;
+            width: 90%;
+        }
+        #middle{
+            gap: 20px;
+        }
+
+        #middle div h1{
+            font-size: 60px;
+        }
+
+        }
+
 
 
     </style>
@@ -75,20 +197,29 @@
 <body>
     <div id="container">
         <div id="navbar"> 
-           <a href="" >
-            <img src="https://d3fw5vlhllyvee.cloudfront.net/dist/header/ukraine_support.7ad2b5d444bc427dbc5d.png"></a>
-            <a href=>
-              <h2>indeed</h2>
-            </a>
-            <a href=>
+                <img class="logo" src="https://logos.bugcrowdusercontent.com/logos/31c9/4eb4/c1f21362/77aca7a0c2e1d0a71ca2a2f404b6c17d_Untitled.png" >
+
+            <img src="https://d3fw5vlhllyvee.cloudfront.net/dist/header/ukraine_support.7ad2b5d444bc427dbc5d.png">  
+            <a href="index.html">
               <h2>Find Jobs</h2>
             </a>
             <a href="company.html">
               <h2>company reviews</h2>
             </a>
-            <a href=>
+            <a href="salary.html">
               <h2>Salary Guide</h2>
             </a>
+        </div>
+        <div class="hover">
+            <a class="sign" href="sign-create.html">
+                <h2>Post your resume</h2>
+              </a>
+              <a class="sign" href="sign-create.html">
+                <h2><span>Sign in</span></h2>
+              </a>
+              <a class="sign" href="post-job.html">
+                <h2>Employers / Post job</h2>
+              </a>
         </div>
     </div>
     <div id="flex">
@@ -141,7 +272,118 @@
             <button>Work for Indeed</button>
             <button>Leadership</button>
         </div>
-        
     </div>
+
+    <div id="bottom">
+        <div>
+            <h1>We're here to help</h1>
+            <h4>Visit our Help Center for answers to common questions or contact us directly.</h4>
+            <button>Help Center</button>
+            <button>Contact Support</button>
+        </div>
+        <div class="bottom-grid">
+            <div class="first">
+                <h3>Indeed</h3>
+            </div>
+            <div  class="se">
+                <h3>Job Seekers</h3>
+            </div>
+            <div class="th">
+                <h3 >Resources</h3>
+            </div>
+        </div>
+    </div>
+
+        <div>
+            <p>© 2022 • Indeed</p>
+       </div>
 </body>
 </html>
+<script>
+    let data=[
+        {
+            name:"About Indeed"
+        },
+        {
+            name:"Press"
+        },
+        {
+            name:"Security"
+        },
+        {
+            name:"Cookies"
+        },
+        {
+            name:"Terms"
+        },
+        {
+            name:"Privacy center"
+        },
+        {
+            name:"Privacy policy"
+        },
+        {
+            name:"Accessibility at Indeed"
+        },
+        {
+            name:"Work at Indeed"
+        },
+        {
+            name:"Countries"
+        },
+    ]
+
+    data.map(function(ele){
+        let p=document.createElement("p");
+        p.innerText=ele.name
+
+        document.querySelector(".first").append(p)
+    })
+
+    let datase=[
+    {
+            name:"Post Your Resume"
+        },
+        {
+            name:"Career advice"
+        },
+        {
+            name:"Salaries"
+        },
+        {
+            name:"Browse jobs"
+        },
+        {
+            name:"Get resume help"
+        },
+    ]    
+    datase.map(function(ele){
+        let p=document.createElement("p");
+        p.innerText=ele.name
+
+        document.querySelector(".se").append(p)
+    })
+let datath=[
+{
+            name:"Hiring resources"
+        },
+        {
+            name:"How to write job descriptions"
+        },
+        {
+            name:"Guide to hiring with Indeed"
+        },
+        {
+            name:"Indeed Events"
+        },
+
+]
+    
+
+    datath.map(function(ele){
+        let p=document.createElement("p");
+        p.innerText=ele.name
+
+        document.querySelector(".th").append(p)
+    })
+</script>
