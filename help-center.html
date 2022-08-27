@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>help center</title>
+    <style>
+        #grid{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(3,auto);
+            width: 80%;
+            margin: auto;
+            gap: 30px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            margin-top: 60px;
+            
+        }
+
+        .flex{
+            border: 1px solid rgb(161, 161, 161);
+            border-radius: 10px;
+            padding: 20px;
+          
+        }
+
+        .flex img{
+            width: 10%;
+            
+        }
+         span{
+            color: blue;
+         }
+
+         .flex p{
+            text-decoration: underline;
+            cursor: pointer;
+         }
+
+         .flex span:hover,
+         .flex h1:hover{
+            text-decoration: underline;
+            cursor: pointer;
+         }
+
+         #top{
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(233, 227, 228);
+            margin-bottom: 100px;
+         }
+
+         #top-class{
+            width: 50%;
+            display: flex;
+         }
+         #top-class h1{
+            margin-left: 10px;
+            font-size: 18px;
+            margin-top: 30px;
+         }
+
+         .hover>select{
+            margin-top: 50px;
+            color: blue;
+            border: none;
+            width: 100%;
+            font-weight: bolder;
+            background-color: rgb(233, 227, 228);
+         }
+
+         #container{
+            background-color: rgb(233, 227, 228);
+            text-align: center;
+         }
+
+         #container > button {
+            color: white;
+            background-color: blue;
+            border: none;
+            height: 70px;
+            border-radius: 10px;
+            width: 10%;
+            font-weight: bolder;
+            margin-bottom: 80px;
+         }
+
+         #container > input{
+            height: 60px;
+            border-radius: 10px;
+            width: 40%;
+         }
+
+         @media all and (min-width: 460px) and (max-width: 880px){
+            #grid{
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(6,auto);
+            
+        }
+
+         #container > button {
+            width: 15%;
+         }
+
+
+         span{
+            color: blue;
+         }
+         }
+         @media all and (min-width: 250px) and (max-width: 459px){
+            #grid{
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(6,auto);
+            font-size: 10px;
+            
+        }
+
+         #container > button {
+            width: 20%;
+            font-size: 10px;
+         }
+
+         .flex img{
+            width: 20%;
+         }    
+
+
+         span{
+            font-size: 8px;
+         }
+
+         #top-class h1{
+            margin-left: 10px;
+            font-size: 18px;
+            margin-top: 30px;
+         }
+         }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="top">
+            <div id="top-class"> 
+                <img src="https://theme.zdassets.com/theme_assets/499832/0671704df754683d3a836feff8546bb108cc1f1b.svg">  
+                <h1>Help Center</h1>
+            </div>
+            <div class="hover">
+                <select>
+                    <option>English (In)</option>
+                    <option>English (CN)</option>
+                    <option>English (US</option>
+                    <option>English (NZ)</option>
+                </select>
+            </div>
+         </div>  
+    <input type="text" placeholder="Search" />
+    <button>Search</button>
+    </div>
+    
+    <div id="grid">
+        <div class="flex">
+                <img src="https://thumbs.dreamstime.com/b/satisfied-patient-leaves-good-review-to-doctor-using-mobile-application-hand-rates-five-stars-customer-feedback-online-212345685.jpg"/>
+                <h1>My Indeed Account</h1>
+                <p>How Do I Reset My Password?</p>
+                <p>I Can't Sign In To My Account</p>
+                <span>Explore more articles -></span>
+        </div>
+        <div class="flex">
+                <img src="https://mayerbrothers.com/wp-content/uploads/2021/05/indeed-employer-logo.png"/>
+                <h1>
+                    Company Pages & Reviews</h1>
+                <p>How Do I See All Reviews on Company Pages?</p>
+                <p>How to Add and Delete Your Company Reviews</p>
+                <span>Explore more articles -></span>
+        </div>
+        <div class="flex">
+                <img src="https://www.zurich.com/en/products-and-services/protect-your-business/-/media/Project/Zurich/Dotcom/pictograms/industries-2.svg"/>
+                <h1>Job Alerts</h1>
+                <p>How to create a Job Alert</p>
+                <p>How to Cancel Job Alert Emails</p>
+                <span>Explore more articles -></span>
+        </div>
+        <div class="flex">
+                <img src="https://cdn-icons-png.flaticon.com/512/4144/4144457.png"/>
+                <h1>Job Search Tips</h1>
+                <p>Getting Started With Your Job Search</p>
+                <p>Guidelines for a Safe Job Search</p>
+                <p>Reporting a Job</p>
+                <span>Explore more articles -></span>
+        </div>
+        <div class="flex">
+                <img src="https://assets.website-files.com/5f22e5b74436873f7de24093/5f491349da68ec6961b3930e_026-search.svg"/>
+                <h1>Indeed Resume</h1>
+                <p>How Do I Replace an Existing Resume on My Account?</p>
+                <p>How Do I View My Resume on Indeed?</p>
+                <span>Explore more articles -></span>
+        </div>
+        <div class="flex">
+                <img src="https://www.indeed.com/profile/gatsby-assets/static/tech-1c03fcdfd434417aa49911374df88747.svg"/>
+                <h1>
+                    Applying for a Job</h1>
+                <p>How to apply to a job on Indeed</p>
+                <span>Explore more articles -></span>
+        </div>
+    </div>
+    <div>
+        <p>© 2022 Indeed <span>- Cookies, Privacy and Terms - Employer Help Center</span></p>
+    </div>
+</body>
+</html>
