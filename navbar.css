@@ -82,7 +82,7 @@
 
 @media all and (min-width: 280px) and (max-width: 599px){
     #navbar a{
-        font-size: 6px;
+        font-size: 5px;
     }
     
     .logo{
@@ -97,7 +97,7 @@
     
     
     .sign{
-        font-size: 7px;
+        font-size: 5px;
     }    
     
     .hover{
