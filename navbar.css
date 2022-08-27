@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgba(0, 0, 0, 0.062);
-    height: 50px;
+    height: 60px;
 
 }
 #navbar{
@@ -22,14 +22,14 @@
 }
 
 .logo{
-    width: 20%;
-    height: 70px;
+    width: 30%;
+    height: 80px;
     margin-top: -20px;
     margin-right: -20px;
 }
 
 #navbar img+img{
-    width: 8%;
+    width: 6%;
     height: 40px;
 
 }
@@ -52,4 +52,56 @@
 }
 .sign span{
     color: blue;
+}
+
+@media all and (min-width: 600px) and (max-width: 1000px){
+    
+    #navbar a{
+        font-size: 8px;
+    }
+    
+    .logo{
+        margin-right: -0px;
+    }
+    
+    #navbar img+img{
+        width: 20%;
+        margin-right: 2%;
+    
+    }
+    
+    
+    .sign{
+        font-size: 8px;
+    }    
+    
+    .hover{
+        width: 40%;
+    }
+}
+
+@media all and (min-width: 280px) and (max-width: 599px){
+    #navbar a{
+        font-size: 6px;
+    }
+    
+    .logo{
+        margin-right: -0px;
+    }
+    
+    #navbar img+img{
+        width: 10%;
+        margin-right: 2%;
+    
+    }
+    
+    
+    .sign{
+        font-size: 7px;
+    }    
+    
+    .hover{
+        width: 40%;
+    }
+
 }
