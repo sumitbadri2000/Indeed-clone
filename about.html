@@ -175,17 +175,53 @@
         @media all and (min-width: 280px) and (max-width: 599px){
             #flex{
                 flex-direction: column;
+                margin-top: 0px;
             }
         #flex img{
             height: 250px;
             width: 90%;
         }
+
+        #flex > div+div{
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        #flex > div{
+            font-size: 20px;
+        }
+
+        #flex > div > button {
+            margin-bottom: 10px;
+        }
         #middle{
-            gap: 20px;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(3,auto);
+            width: 60%;
         }
 
         #middle div h1{
             font-size: 60px;
+        }
+
+        #bottom{
+            flex-direction: column;
+        }
+
+        #bottom button{
+            font-size: 10px;
+        }
+        .bottom-grid{
+            width: 80%;
+            gap: 10px;
+        }
+
+        .bottom-grid p{
+            font-size: 10px;
+        }
+
+        .bottom-grid h3{
+            font-size: 12px;
         }
 
         }
