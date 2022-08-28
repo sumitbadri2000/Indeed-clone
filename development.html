@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development</title>
+    <link rel="stylesheet" href="navbar.css" />
+    <style>
+        #container-1{
+         background-color: rgb(232, 220, 222);
+         display: flex;
+         justify-content: space-between;
+         height: 30px;
+         align-items: center;
+         padding: 20px;
+     }
+
+     .navbar-1{
+         width: 60%;
+         display: flex;
+         justify-content: space-around; 
+     }
+
+     .navbar-1 > a{
+         text-decoration: none;
+         color: black;
+     }
+
+     .navbar-1 > a:hover{
+         text-decoration: underline;
+         color: blue;
+     }
+
+     #container-1 > div > input{
+         border-radius: 10px;
+         width: 100%;
+         height: 40px;
+     }
+
+     #contain{
+         width: 80%;
+         margin: auto;
+         font-family: Arial, Helvetica, sans-serif;
+     }
+
+    #grid{
+         display: grid;
+         grid-template-columns: repeat(3,1fr);
+         grid-template-rows: repeat(3,auto);
+         font-size: 15px;
+         gap: 40px;
+          text-align: left;
+     }
+
+     #grid div > h1:hover,
+     #con div > h1:hover{
+         color: blue;
+         text-decoration: underline;
+         cursor: pointer;
+     }
+
+     #grid div > p,
+     #con div > p{
+         font-size: 18px;
+         line-height: 26px;
+         color: grey
+     }
+
+     #grid img{
+         width: 100%;
+     }
+     .line{
+         border: 1px solid rgb(170, 170, 170);
+         margin-bottom: 50px;
+         margin-top: 50px;
+     }
+
+     #flex-contain{
+         display: flex;
+         width: 80%;
+         margin: auto;
+         margin-top: 50px;
+         font-family: Arial, Helvetica, sans-serif;
+     }
+
+     #flex-contain > div+div > h1{
+         font-size: 22px;
+     }
+     #flex-contain > div+div > p{
+         font-size: 20px;
+         text-align: left;
+         color: grey;
+     }
+
+     #flex-contain > div+div > p:hover{
+         cursor: pointer;
+         color: blue;
+         text-decoration: underline;
+     }
+
+
+     #flex-contain > div+div > div{
+         border: 3px solid blue;
+     }
+
+     .flex-row{
+         display: flex;
+         margin-bottom: 20px;
+     }
+
+     .flex-row > img{
+         width: 30%;
+         border-radius: 10px;
+         margin-right: 30px;
+         height: 150px;
+     }
+
+     .flex-row > div{
+         width: 60%;
+         font-size: 12px;
+     }
+
+     .flex-row > div > h1:hover{
+         text-decoration: underline;
+         color: blue;
+         cursor: pointer;
+     }
+
+     .flex-row > div > p{
+         font-size: 20px;
+     }
+
+     #top {
+         display: flex;
+         width: 90%;
+         margin: auto;
+         margin-top: 40px;
+     }
+
+     #top > div{
+         font-size: 20px;
+     }
+
+     #top > div > h1{
+         margin-bottom: -10px;
+     }
+
+     #top > img{
+         width: 10%;
+         margin-right: 30px;
+         height: 100px;
+     }
+     #footer {
+         display: flex;
+         justify-content: space-between;
+         margin-top: 50px;
+         margin-bottom: 20px;
+     }
+
+     #footer div{
+         width: 50%;
+         font-size: 14px;
+         color: grey;
+     }
+
+     #footer div+div{
+         display: flex;
+         width: 40%;
+     }
+
+     @media all and (min-width: 600px) and (max-width: 1280px){
+
+         #container-1{
+         font-size: 10px;
+     }
+
+     .navbar-1{
+         width: 80%;
+     }
+         #grid{
+         font-size: 8px;
+         }
+
+     #grid div > p{
+         font-size: 14px;
+         line-height: 20px;
+     }
+
+     #flex-contain{
+         flex-direction: column;
+     }
+
+     #footer {
+         flex-direction: column;
+     }
+
+     #footer div{
+         width: 100%;
+         font-size: 14px;
+     }
+
+     #footer div+div{
+         width: 100%;
+     }
+
+     }
+     @media all and (min-width: 240px) and (max-width: 599px){
+
+     #top > div{
+         font-size: 14px;
+     }
+
+     #top > div > h1{
+         margin-bottom: -10px;
+     }
+
+     #top > img{
+         width: 30%;
+         height: 80px;
+     }
+     #container-1{
+         font-size:5px;
+     }
+
+
+     #container-1 > div > input{
+         height: 30px;
+     }
+     #grid{
+         grid-template-columns: repeat(1,1fr);
+         grid-template-rows: repeat(9,auto);
+         font-size: 8px;
+     }
+
+     #grid div > p{
+         font-size: 14px;
+         line-height: 20px;
+     }
+
+     #flex-contain{
+         flex-direction: column;
+     }
+
+     .flex-row{
+         flex-direction: column;
+         margin: auto;
+         width: 80%;
+     }
+
+     .flex-row > img{
+         width: 100%;
+         height: 150px;
+     }
+
+     .flex-row > div{
+         width: 100%;
+         font-size: 12px;
+     }
+
+     .flex-row > div > p{
+         font-size: 12px;
+     }
+
+     #footer {
+         flex-direction: column;
+     }
+
+     #footer div{
+         width: 100%;
+         font-size: 14px;
+     }
+
+     #footer div+div{
+         width: 100%;
+         font-size: 8px;
+     }
+     }
+
+ 
+ </style>
+</head>
+<body>
+    <div id="container">
+        <div id="navbar"> 
+                <img class="logo" src="https://logos.bugcrowdusercontent.com/logos/31c9/4eb4/c1f21362/77aca7a0c2e1d0a71ca2a2f404b6c17d_Untitled.png" >
+
+            <img src="https://d3fw5vlhllyvee.cloudfront.net/dist/header/ukraine_support.7ad2b5d444bc427dbc5d.png">  
+            <a href="index.html">
+              <h2>Find Jobs</h2>
+            </a>
+            <a href="company.html">
+              <h2>company reviews</h2>
+            </a>
+            <a href="salary.html">
+              <h2>Salary Guide</h2>
+            </a>
+        </div>
+        <div class="hover">
+            <a class="sign" href="sign-create.html">
+                <h2>Post your resume</h2>
+              </a>
+              <a class="sign" href="sign-create.html">
+                <h2><span>Sign in</span></h2>
+              </a>
+              <a class="sign" href="post-job.html">
+                <h2>Employers / Post job</h2>
+              </a>
+        </div>
+    </div>
+
+    <div id="container-1">
+        <div class="navbar-1">
+            <a href="career-advice.html"><p>Career Guide </p></a>
+            <a href="findjob.html"><p>Finding a job</p></a>
+            <a href="resume.html"><p>Resume & Cover Letters</p></a>
+            <a href="interview.html"><p>Interviewing</p></a>
+            <a href="pay.html"><p>Pay & Salary</p></a>
+            <a href="development.html"><p>Carrer Development</p></a>
+        </div>
+        <div>
+            <input type="text" placeholder="search" />
+        </div>
+    </div>
+
+        <div id="top">
+            <img src="https://images.ctfassets.net/pdf29us7flmy/4RxFms4xsb93YIPy3R0VkK/2a1d7246ddbfbb5c75f727e29657327a/career-development.svg?w=200&q=100&fm=avif" />
+            <div>
+                <h1>Career Development</h1>
+                <p>Skills and steps to take your career to the next level</p>
+            </div> 
+        </div>
+
+    <div id="flex-contain">
+        <div>
+            <div class="flex-row">
+                <img src="https://images.ctfassets.net/pdf29us7flmy/5l7qUDssjOCj1mOWnUwfAm/2928883bd60e1beabd5ce3c439242a0b/1.svg?w=720&q=100&fm=avif" />
+                <div>
+                    <h1>How To Write a Memorable Farewell Message
+                        </h1>
+                    <p>A farewell message is a way to share your best wishes and to leave on a positive note. Discover some useful tips on how to write a memorable farewell message.</p>
+                </div>
+                
+            </div>
+            <div class="flex-row">
+                <img src="https://images.ctfassets.net/pdf29us7flmy/2XcuoC07bZ0ckJ5bcyoSLB/83bfa34da0c6ba6522e6d816f05541f3/2.svg?w=720&q=100&fm=avif" />
+                <div>
+                    <h1>50 Self-Appraisal Comments for Your Performance Review
+                       </h1>
+                    <p> Discover 50 sample self-appraisal comments you can reference and learn the steps you can take to write a self-appraisal for your next performance review.</p>
+                </div>
+                
+            </div>
+            <div class="flex-row">
+                <img src="https://images.ctfassets.net/pdf29us7flmy/5sPQBOE5X5M4LwnR6jTFWr/492bc51931aacbd9507ecb9bbfcdd3ca/career-spot-2.svg?w=720&q=100&fm=avif" />
+                <div>
+                    <h1>
+                        How To Start a Presentation (With Tips and Examples)</h1>
+                    <p>Discover the importance of a solid presentation introduction, learn how to start a presentation and see examples and tips that can guide your process.</p>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <div></div>
+            <h1>Featured Articles</h1>
+            <p>12 Jobs For A Career Change (With Salaries And Duties)</p>
+            <p>What Is Queuing Theory? (Definition And Characteristics)</p>
+            <p>What Is A Relationship In Database? (Definition And Types)</p>
+            <p>What Is Network Address Translation? (Types And FAQs)</p>
+            <p>How To Get A CCNA Certification: A Step-By-Step Guide</p>
+        </div>
+    </div>
+
+    <div id="contain">
+        <h1>Explore more articles</h1>
+        <div id="grid">
+            <div>
+                <img src="https://images.ctfassets.net/pdf29us7flmy/2XAnFpDVJMCDx8sI4ftUZS/1208b97edba8f6c7f55cf36e1adc030e/resume-cover-letter-hero.svg?w=720&q=100&fm=avif"/>
+                <h1>FAQ: Why You Need A Resume (Plus Helpful Tips And Formats)</h1>
+                <p>Explore five important reasons why you need a resume, learn tips for creating one, explore four different types of resume formats and their...</p>
+            </div>
+            <div>
+                <img src="https://images.ctfassets.net/pdf29us7flmy/7659unzjf8g5CKRtJQBlka/cd50dc4bce5e967bfbfe08c5b5dc9c8d/1.svg?w=720&q=100&fm=avif"/>
+                <h1>How To Write Resumes For 1 Year Of Experience (With Samples)</h1>
+                <p>Find out how to write resumes for 1 year of experience in eight steps and review samples to help you create one effectively for your job...</p>
+            </div>
+            <div>
+                <img src="https://images.ctfassets.net/pdf29us7flmy/1d904R7zTHvQOUipIOY671/de0edf70b00c28bc73a5b18bb6f3dd17/2.svg?w=720&q=100&fm=avif"/>
+                <h1>11 Important Supervisory Skills And Tips To Highlight Them</h1>
+                <p>Find out why supervisory skills are important, review some examples, discover how to improve your skills and learn ways to highlight them...</p>
+            </div>
+            <div>
+                <h1>Resume Skills For Volunteering: Definition And Examples</h1>
+                <p>Learn what resume skills for volunteering are, review some important examples, find out how to improve them and learn tips fo...</p>
+            </div>
+            <div>
+                <h1>Resume Skills For A Case Manager (Definition And Examples)</h1>
+                <p>Discover what resume skills for a case manager are, explore some examples and find out how to improve these skills and highlight...</p>
+            </div>
+            <div>
+                <h1>Writing An Effective Welcome Aboard Message For A New Boss</h1>
+                <p>Learn what a welcome aboard message for a new boss is, discover why they're important and explore examples of messages to welcom...</p>
+            </div>
+            <div>
+                <h1>What Are Areas of Expertise? A Complete Guide (With Types)</h1>
+                <p>Find out the answer to, 'What are areas of expertise?', discover why highlighting them during a job search is important and review...</p>
+            </div>
+            <div>
+                <h1>How To Reject A Job Offer After Accepting It (Plus Tips)</h1>
+                <p>Learn how to reject a job offer after accepting it, review the steps to follow, examine a rejection letter template with an example and...</p>
+            </div>
+            <div>
+                <h1>How To Highlight Sonographer Resume Skills (With Example)</h1>
+                <p>Discover how to highlight sonographer resume skills on a resume and during job interviews, find out which skills to include an...</p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="line"></div>    
+    <div id="contain">
+        <h1>Recently Published Articles</h1>
+        <div id="grid">
+            <div>
+                <img src="https://images.ctfassets.net/pdf29us7flmy/7659unzjf8g5CKRtJQBlka/cd50dc4bce5e967bfbfe08c5b5dc9c8d/1.svg?w=720&q=100&fm=avif"/>
+                <h1>68 Common Business Development Executive Interview Questions</h1>
+                <p>Review a list of 68 general and in-depth business development executive interview questions and read sample answers to prepare...</p>
+            </div>
+            <div>
+                <img src="https://images.ctfassets.net/pdf29us7flmy/1d904R7zTHvQOUipIOY671/de0edf70b00c28bc73a5b18bb6f3dd17/2.svg?w=720&q=100&fm=avif"/>
+                <h1>6 VB.Net Interview Questions (With Sample Answers And Tips)</h1>
+                <p>Review some frequently asked VB.Net interview questions that employers typically ask and sample answers that you can refer to for...</p>
+            </div>
+            <div>
+                <img src="https://images.ctfassets.net/pdf29us7flmy/1hIqttFJcKQBgsfZN3OJQa/a49dae1e3cbe9b426d05239fb8dc18f0/resume-cover-letter-spot-2.svg?w=720&q=100&fm=avif"/>
+                <h1>10 Terraform Interview Questions And Answers (With Tips)</h1>
+                <p>Explore 10 important Terraform interview questions and answers, find out why employers ask them and review helpful tips to enhanc...</p>
+            </div>
+            <div>
+                <h1>What Is An In-Depth Interview? (And How To Conduct One)</h1>
+                <p>Discover what an in-depth interview is, examine some steps necessary to plan and conduct one successfully and the advantages...</p>
+            </div>
+            <div>
+                <h1>7 Common SAP UI5 Interview Questions (With Sample Answers)</h1>
+                <p>Review sample answers to seven common SAP UI5 interview questions and also read some helpful tips you may follow to...</p>
+            </div>
+            <div>
+                <h1>39 Analog Electronics Interview Questions And Answers</h1>
+                <p>Discover 39 general and in-depth analog electronics interview questions and see a few sample answers to help you prepare for...</p>
+            </div>
+            <div>
+                <h1>8 Web Development Interview Questions (With Sample Answers)</h1>
+                <p>Review eight web development interview questions and answers, find out what employers typically expect and review useful tips for...</p>
+            </div>
+            <div>
+                <h1>34 Page Object Model Interview Questions (With Answers)</h1>
+                <p>Discover some general, experience-related and in-depth Page Object Model interview questions and review some sample answers to...</p>
+            </div>
+            <div>
+                <h1>6 Order To Cash Interview Questions With Sample Answers</h1>
+                <p>Explore sample answers to six common order to cash interview questions, see why employers ask them and review some tips to...</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="footer">
+        <div>
+            <p>© 2022 Indeed · Indeed India Operations (Pte) Ltd. | Ground Floor, Block C, Divyasree Omega Hitech City Road | Kondapur | Hyderabad TG 500084 | IN</p>
+        </div>
+        <div>
+            <p>Cookies</p>
+            <p> - Privacy</p>
+            <p> - Security</p>
+            <p> - Terms</p>
+            <p> - Accessibility at Indeed</p>
+            <p> - Privacy Center</p>
+            <p> - Contact Us</p>
+            
+        </div>
+    </div>
+</body>
+</html>
