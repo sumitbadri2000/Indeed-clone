@@ -26,7 +26,7 @@ HTML, CSS
 ![Post ](https://user-images.githubusercontent.com/110050319/221775099-19f5eb41-7e08-4455-adeb-d4e8360114b5.png)
 
 
-## Deployment Link : https://keen-blancmange-380824.netlify.app/
+Deployment Link : https://keen-blancmange-380824.netlify.app/
 
 
 I hope this readme will help in establishing better understanding of the project.
